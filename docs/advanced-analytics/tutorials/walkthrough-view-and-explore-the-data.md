@@ -2,13 +2,15 @@
 title: "View and explore the data using SQL (walkthrough)| Microsoft Docs"
 ms.custom: ""
 ms.date: "07/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "tutorial"
 applies_to: 
   - "SQL Server 2016"
 dev_langs: 
@@ -17,9 +19,11 @@ ms.assetid: d3835d6d-e68b-486d-81a0-81b717cc6134
 caps.latest.revision: 33
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
+ms.workload: "Inactive"
 ---
 # View and explore the data using SQL (walkthrough)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Data exploration is an important part of modeling data, and involves reviewing summaries of data objects to be used in the analyses, as well as data visualization. In this lesson, you explore the data objects and generate plots, using both [!INCLUDE[tsql](../../includes/tsql-md.md)] and R functions included in [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].
 
@@ -47,7 +51,7 @@ First, take a minute to ascertain that your data was loaded correctly.
     ```SQL
     SELECT TOP 1000 * FROM [dbo].[nyctaxi_sample]
     ```
-    If you don't see any data in the table, refer to the [Troubleshooting](/walkthrough-prepare-the-data.md) section in the previous topic.
+    If you don't see any data in the table, refer to the [Troubleshooting](walkthrough-prepare-the-data.md) section in the previous topic.
 
 4. This data table has been optimized for set-based calculations, by adding a [columnstore index](../../relational-databases/indexes/columnstore-indexes-overview.md). Run this statement to generate a quick summary on the table.
 
@@ -63,8 +67,8 @@ First, take a minute to ascertain that your data was loaded correctly.
 
 ## Next lesson
 
-[Summarize data using R](/walkthrough-view-and-summarize-data-using-r.md)
+[Summarize data using R](walkthrough-view-and-summarize-data-using-r.md)
 
 ## Previous lesson
 
-[Prepare the data using PowerShell](/walkthrough-prepare-the-data.md)
+[Prepare the data using PowerShell](walkthrough-prepare-the-data.md)

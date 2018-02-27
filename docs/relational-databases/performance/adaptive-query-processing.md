@@ -1,11 +1,14 @@
 ---
 title: "Adaptive query processing in Microsoft SQL databases | Microsoft Docs | Microsoft Docs"
 description: "Adaptive query processing features to improve query performance in SQL Server (2017 and later), and Azure SQL Database."
-ms.custom: 
-ms.date: "07/19/2017"
-ms.prod: "sql-server-2017"
+ms.custom: ""
+ms.date: "11/13/2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "performance"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -13,12 +16,11 @@ helpviewer_keywords:
 ms.assetid: 
 author: "joesackmsft"
 ms.author: "josack;monicar"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
-
 # Adaptive query processing in SQL databases
-
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 This article introduces these adaptive query processing features that you can use to improve query performance in SQL Server and Azure SQL Database:
 - Batch mode memory grant feedback.
@@ -64,7 +66,7 @@ With memory grant feedback enabled, for the second execution, duration is *1 se
 Different parameter values may also require different query plans in order to remain optimal. This type of query is defined as “parameter-sensitive.” For parameter-sensitive plans, memory grant feedback will disable itself on a query if it has unstable memory requirements.  The plan is disabled after several repeated runs of the query and this can be observed by monitoring the *memory_grant_feedback_loop_disabled* XEvent.
 
 ### Memory grant feedback caching
-Feedback can be stored in the cached plan for a single execution. It is the consecutive executions of that statement, however, that benefit from the memory grant feedback adjustments. This feature applies to repeated execution of statements. Memory grant feedback will change only the cached plan. Changes are currently not captured in the query Ssore.
+Feedback can be stored in the cached plan for a single execution. It is the consecutive executions of that statement, however, that benefit from the memory grant feedback adjustments. This feature applies to repeated execution of statements. Memory grant feedback will change only the cached plan. Changes are currently not captured in the Query Store.
 Feedback is not persisted if the plan is evicted from cache. Feedback will also be lost if there is a failover. A statement using OPTION(RECOMPILE) creates a new plan and does not cache it. Since it is not cached, no memory grant feedback is produced and it is not stored for that compilation and execution.  However, if an equivalent statement (that is, with the same query hash) that did *not* use OPTION(RECOMPILE) was cached and then re-executed, the consecutive statement can benefit from memory grant feedback.
 
 ### Tracking memory grant feedback activity
@@ -95,10 +97,10 @@ The query returns 336 rows.  Enabling Live Query Statistics we see the followin
 ![Query result 336 rows](./media/4_AQPStats336Rows.png)
 
 In the plan, we see the following:
-- We have a columnstore index scan used to provide rows for the hash join build phase.
-- We have the new adaptive join operator. This operator defines a threshold that is used to decide when to switch to a nested loop plan.  For our example, the threshold is 78 rows.  Anything with &gt;= 78 rows will use a hash join.  If less than the threshold, a nested loop join will be used.
-- Since we return 336 rows, we are exceeding the threshold and so the second branch represents the probe phase of a standard hash join operation. Notice that Live Query Statistics shows rows flowing through the operators – in this case “672 of 672”.
-- And the last branch is our Clustered Index Seek for use by the nested loop join had the threshold not been exceeded. Notice that we see “0 of 336” rows displayed (the branch is unused).
+1. We have a columnstore index scan used to provide rows for the hash join build phase.
+1. We have the new adaptive join operator. This operator defines a threshold that is used to decide when to switch to a nested loop plan.  For our example, the threshold is 78 rows.  Anything with &gt;= 78 rows will use a hash join.  If less than the threshold, a nested loop join will be used.
+1. Since we return 336 rows, we are exceeding the threshold and so the second branch represents the probe phase of a standard hash join operation. Notice that Live Query Statistics shows rows flowing through the operators – in this case “672 of 672”.
+1. And the last branch is our Clustered Index Seek for use by the nested loop join had the threshold not been exceeded. Notice that we see “0 of 336” rows displayed (the branch is unused).
  Now let’s contrast the plan with the same query, but this time for a Quantity value that only has one row in the table:
  
 ```sql
@@ -160,7 +162,7 @@ The following chart shows an example intersection between the cost of a hash joi
 Interleaved execution changes the unidirectional boundary between the optimization and execution phases for a single-query execution and enables plans to adapt based on the revised cardinality estimates. During optimization if we encounter a candidate for interleaved execution, which is currently **multi-statement table valued functions (MSTVFs)**, we will pause optimization, execute the applicable subtree, capture accurate cardinality estimates, and then resume optimization for downstream operations.
 MSTVFs have a fixed cardinality guess of “100” in SQL Server 2014 and SQL Server 2016, and “1” for earlier versions. Interleaved execution helps workload performance issues that are due to these fixed cardinality estimates associated with multi-statement table valued functions.
 
-The following image depicts a live query statistis ouput, a subset of an overall execution plan that shows the impact of fixed cardinality estimates from MSTVFs. You can see the actual row flow vs. estimated rows. There are three noteworhy areas of the plan (flow is from right to left):
+The following image depicts a live query statistics ouput, a subset of an overall execution plan that shows the impact of fixed cardinality estimates from MSTVFs. You can see the actual row flow vs. estimated rows. There are three noteworthy areas of the plan (flow is from right to left):
 1. The MSTVF Table Scan has a fixed estimate of 100 rows. For this example, however, there are *527,597* rows flowing through this MSTVF Table Scan as seen in Live Query Statistics via the “527597 of 100” actual of estimated – so the fixed estimate is significantly skewed.
 1. For the Nested Loops operation, only 100 rows are assumed to be returned by the outer side of the join. Given the high number of rows actually being returned by the MSTVF, you are likely better off with a different join algorithm altogether.
 1. For the Hash Match operation, notice the small warning symbol, which in this case is indicating a spill to disk.
@@ -176,7 +178,7 @@ Contrast the prior plan with the actual plan generated with interleaved executio
 1. Also notice that we no longer have spill-warnings, as we’re granting more memory based on the true row count flowing from the MSTVF table scan.
 
 ### Interleaved execution eligible statements
-MSTVF referencing statements in interleaved execution must currently be read-only and not part of a data modification operation. Also, the MSTVFs are not be eligible for interleaved execution if they are used on the inside of a CROSS APPLY.
+MSTVF referencing statements in interleaved execution must currently be read-only and not part of a data modification operation. Also, MSTVFs are not eligible for interleaved execution if they do not use runtime constants.
 
 ### Interleaved execution benefits
 In general, the higher the skew between the estimated vs. actual number of rows, coupled with the number of downstream plan operations, the greater the performance impact.
@@ -219,8 +221,9 @@ Plans using interleaved execution can be forced. The plan is the version that ha
 
 ## See Also
 
-[Performance Center for SQL Server Database Engine and Azure SQL Database](https://docs.microsoft.com/en-us/sql/relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database)   
+[Performance Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)
+
+[Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md)
 
 [Demonstrating Adaptive Query Processing](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)      
-
 

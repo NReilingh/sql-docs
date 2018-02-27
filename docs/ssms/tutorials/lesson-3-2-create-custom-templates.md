@@ -2,9 +2,12 @@
 title: "Create Custom Templates | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-tutorial"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -17,11 +20,13 @@ helpviewer_keywords:
   - "templates [Transact-SQL]"
 ms.assetid: 41098e78-b482-410e-bfe8-2ac10769ac4a
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Lesson 3-2 - Create Custom Templates
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] comes with templates for many common tasks, but the real power of templates lies in the ability to create a custom template for a complex script that you must create frequently. In this practice you will create a simple script with few parameters, but templates are useful for long, repetitive scripts, too.  
   
 ## Using Custom Templates  
@@ -43,7 +48,7 @@ manager: "jhubbard"
 7.  In Query Editor, type the following script to create a stored procedure that looks up orders for a particular part, in this case the Blade. (You can copy and paste the code from the Tutorial window.)  
   
     ```  
-    USE AdventureWorks20012;  
+    USE AdventureWorks2012;  
     GO  
     IF EXISTS (  
     SELECT *   
@@ -63,11 +68,11 @@ manager: "jhubbard"
   
 8.  Press F5 to execute this script, creating the **WorkOrdersForBlade** procedure.  
   
-9. In Object Explorer, right-click your server, and then click **New Query**. A new Query Editor window opens.  
+9. In Object Explorer, right-click the **AdventureWorks2012** database, and then click **New Query**. A new Query Editor window opens.  
   
 10. In Query Editor, type **EXECUTE dbo.WorkOrdersForBlade**, and then press F5 to execute the query. Confirm that the **Results** pane returns a list of work orders for blades.  
   
-11. Edit the template script (the script in step 7), replacing the product name Blade with the parameter ***\<*product_name**, **nvarchar(50)**, **name*>***, in four places.  
+11. Edit the template script (the script in step 7), replacing the product name Blade with the parameter **\<product_name, nvarchar(50), name>**, in four places.  
   
     > [!NOTE]  
     > Parameters require three elements: the name of the parameter that you want to replace, the data type of the parameter, and a default value for the parameter.  
@@ -75,7 +80,7 @@ manager: "jhubbard"
 12. Now the script should look like:  
   
     ```  
-    USE AdventureWorks20012;  
+    USE AdventureWorks2012;  
     GO  
     IF EXISTS (  
     SELECT *   

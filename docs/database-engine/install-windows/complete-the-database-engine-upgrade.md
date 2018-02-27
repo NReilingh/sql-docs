@@ -1,12 +1,13 @@
 ---
 title: "Complete the Database Engine Upgrade | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/21/2017"
-ms.prod: 
-   - "sql-server-2016"
-   - "sql-server-2017"
+ms.date: "10/23/2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "install-windows"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "server-general"
 ms.tgt_pltfrm: ""
@@ -15,9 +16,11 @@ ms.assetid: 3f08087e-e532-416c-8caa-e0ec88c57596
 caps.latest.revision: 10
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # Complete the Database Engine Upgrade
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 After the upgrading SQL Server complete, there are a number of additional steps that you may need to take. These include the following:  
   
@@ -25,7 +28,7 @@ After upgrading the [!INCLUDE[ssDE](../../includes/ssde-md.md)], complete the fo
   
 - **Backup your databases:** Perform a full backup of each database.  
 
-- **Enable new features:** In SQL Server 2016 and SQL Server 2017, some changes are only enabled once the DATABASE_COMPATIBILITY level for a database has been changed to 130 or greater.  For more information and for the recommended workflow, see [Change the Database Compatibility Mode and Use the Query Store](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md).  
+- **Enable new features:** In SQL Server 2016 and SQL Server 2017, some changes are only enabled once the DATABASE_COMPATIBILITY level for a database has been changed to 130 or greater.  For more information and for the recommended workflow, see [Change the Database Compatibility Mode and Use the Query Store](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md). If your database has memory-optimized tables created in SQL Server 2014, review [Statistics for Memory-Optimized Tables](../../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md).
   
 - **Integration Services:**  
   

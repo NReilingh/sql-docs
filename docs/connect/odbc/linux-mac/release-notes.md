@@ -3,24 +3,56 @@ title: "Release Notes - Microsoft ODBC Driver for SQL Server on Linux and macOS 
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "odbc"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
+ms.suite: "sql"
+ms.technology:
   - "drivers"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Release Notes for the Microsoft ODBC Driver for SQL Server on Linux and macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
+## What's New in the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Linux and macOS
+
+**New distributions supported**:
+macOS High Sierra and Ubuntu 17.10 
+
+**Performance Improvements**:
+Greater than 10x performance improvement when driver converts to/from UTF-8/16.
+
+**Features Added**:
+
+Always Encrypted support for BCP API
+
+New connection string attribute UseFMTOnly causes driver to use legacy metadata in special cases requiring temp tables.
+
+Support for Azure SQL Managed Instance (Extended Private Preview). 
+> [!NOTE]
+> There are a number of differences when using Managed Instance:
+> -   FILESTREAM is not supported 
+> -   Local filesystem access is not supported, but required for things like tracefiles 
+> -   Create UDT from local path is not supported 
+> -   Windows Integrated Authentication is not supported 
+> -   DTC is not supported 
+> -   'sa' account is not present (default account is called 'cloudSA')
+> -   TDS token ERROR (0xAA) returns incorrect server name
+> -   Special characters in database name are not supported 
+> -   ALTER DATABASE [dbname1] MODIFY NAME = [dbname2] is not supported
+> -   The error messages are always shown in English, regardless of language settings (same as Azure) 
+
 ## What's New in the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Linux and macOS  
 
-ODBC Driver 13.1 for [!INCLUDEssNoVersion] adds support for Always Encrypted and Azure Active Directory when used in conjunction with Microsoft SQL Server 2016. 
+ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] adds support for Always Encrypted and Azure Active Directory when used in conjunction with Microsoft SQL Server 2016.
 
-**New distributions supported**: 
+**New distributions supported**:
 OS X 10.11 and macOS 10.12 are supported in the first release of the ODBC Driver on macOS. Ubuntu 16.10 is now also supported, along with Red Hat 6, 7, and SUSE 12. Each platform has a platform-relevant package (RPM or DEB) to ease installation and configuration.  See [Installing the Driver](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) for installation instructions.
 
 **unixODBC Driver Manager 2.3.1 Support Changes**: The ODBC driver no longer depends on custom packaging for the unixODBC driver manager (except on RedHat 6), and instead relies on the distribution package manager to resolve the UnixODBC dependency from the distribution's repositories.
@@ -29,11 +61,11 @@ OS X 10.11 and macOS 10.12 are supported in the first release of the ODBC Driver
 
 ## What's New in the Microsoft ODBC Driver 13.0 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Linux  
 With Microsoft ODBC Driver 13.0 for SQL Server, SQL Server 2014 and SQL Server 2016 are now also supported.  
-  
+
 **New distributions supported**:
 
 Ubuntu is now supported, along with Red Hat and SUSE. Each platform has a platform-relevant package (RPM or DEB) to ease installation and configuration.  See [Installing the Driver](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) for installation instructions.
-  
+
 **unixODBC Driver Manager 2.3.1 Support**: In addition to a newer driver manager, there is also a package for installing this dependency that eases installation and configuration.  
 
 **Transparent Network IP Resolution**: Transparent Network IP Resolution is a revision of the existing Multi-Subnet Failover feature that affects the connection sequence of the driver in the case where the first resolved IP of the hostname does not respond and there are multiple IPs associated with the hostname.
@@ -42,10 +74,9 @@ Ubuntu is now supported, along with Red Hat and SUSE. Each platform has a platfo
 
 ## What's New in the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Linux  
 The ODBC driver on SUSE Linux (Preview) supports 64-bit SUSE Linux Enterprise 11 Service Pack 2. For more information, see [System Requirements](../../../connect/odbc/linux-mac/system-requirements.md).  
-  
+
 The ODBC driver on Linux supports [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]. For more information, see [ODBC Driver on Linux Support for High Availability, Disaster Recovery](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
-  
+
 The ODBC driver on Linux supports connections to Microsoft Azure SQL Database. For more information, see [How to: Connect to Windows Azure SQL Database Using ODBC](http://msdn.microsoft.com/library/hh974312.aspx).  
-  
+
 The `-l` option (login timeout) has been added to `bcp`. For more information, see [Connecting with **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md).
-  

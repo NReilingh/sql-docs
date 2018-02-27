@@ -1,32 +1,26 @@
 ---
-# required metadata
-
 title: Use the Visual Studio Code mssql extension for SQL Server | Microsoft Docs
 description: This tutorial shows how to use the mssql extension for VS Code. This extension allows you to edit and run Transact-SQL scripts in VS Code.
 author: erickangMSFT 
 ms.author: erickang 
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: ""
+ms.suite: "sql"
 ms.technology: database-engine
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
-
-# optional metadata
-
-# keywords: ""
-# ROBOTS: ""
-# audience: ""
-# ms.devlang: ""
-# ms.reviewer: ""
-# ms.suite: ""
-# ms.tgt_pltfrm: ""
-ms.custom: H1Hack27Feb2017
-
+ms.custom: "sql-linux"
+ms.workload: "Active"
 ---
 # Use Visual Studio Code to create and run Transact-SQL scripts for SQL Server
 
-This topic shows how to use the **mssql** extension for Visual Studio Code (VS Code) to develop SQL Server databases.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+
+This article shows how to use the **mssql** extension for Visual Studio Code (VS Code) to develop SQL Server databases.
 
 Visual Studio Code is a graphical code editor for Linux, macOS, and Windows that supports extensions. The [**mssql** extension for VS Code] enables you to connect to SQL Server, query with Transact-SQL (T-SQL), and view the results.
 
@@ -106,7 +100,7 @@ The following steps show how to connect to SQL Server with VS Code.
    | **[Optional] Enter a name for this profile** | The Connection Profile name. For example, you could name the profile **localhost profile**. 
 
    > [!Tip] 
-   > You can create and edit connection profiles in User Settings file (settings.json). Open the settings file by selecting **Preference** and then **User Settings** in the VS Code menu. For more details, see [manage connection profiles].
+   > You can create and edit connection profiles in User Settings file (settings.json). Open the settings file by selecting **Preference** and then **User Settings** in the VS Code menu. For more information, see [manage connection profiles].
 
 6. Press the **ESC** key to close the info message that informs you that the profile is created and connected.
 

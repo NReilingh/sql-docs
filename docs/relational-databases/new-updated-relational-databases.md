@@ -1,21 +1,17 @@
 ---
 title: Updated - Relational Databases docs | Microsoft Docs
 description: Display snippets of updated content for recently changed in documentation, for Relational Databases.
-services: na
-documentationcenter: ''
+
+manager: craigg
 author: MightyPen
-manager: jhubbard
-editor: BYHAM
-ms.service: na
-ms.topic: updart-autogen
-ms.technology: database-engine
-ms.custom: UpdArt.exe
-ms.workload: relational-databases
-ms.tgt_pltfrm: na
-ms.devlang: na
-ms.topic: updart-autogen
-ms.date: 07/17/2017
 ms.author: genemi
+ms.topic: article
+ms.custom: UpdArt.exe
+ms.suite: sql
+ms.prod_service: sql-non-specified
+
+ms.component: relational-databases
+ms.date: 02/03/2018
 ---
 # New and Recently Updated: Relational Databases docs
 
@@ -29,7 +25,7 @@ Recent updates are reported for the following date range and subject:
 
 
 
-- *Date range of updates:* &nbsp; **2017-05-23** &nbsp; -to- &nbsp; **2017-07-17**
+- *Date range of updates:* &nbsp; **2017-12-03** &nbsp; -to- &nbsp; **2018-02-03**
 - *Subject area:* &nbsp; **Relational Databases**.
 
 
@@ -39,17 +35,24 @@ Recent updates are reported for the following date range and subject:
 
 ## New Articles Created Recently
 
-The following links jump to new articles which have been added recently.
+The following links jump to new articles that have been added recently.
 
 
-1. [SQL Server In-Memory OLTP Internals for SQL Server 2016](in-memory-oltp/sql-server-in-memory-oltp-internals-for-sql-server-2016.md)
-2. [Adaptive query processing in SQL databases](performance/adaptive-query-processing.md)
-3. [Guide to enhancing privacy and addressing GDPR requirements with the Microsoft SQL platform](security/microsoft-sql-and-the-gdpr-requirements.md)
-4. [sys.pdw_replicated_table_cache_state (Transact-SQL)](system-catalog-views/sys-pdw-replicated-table-cache-state-transact-sql.md)
-5. [sys.trusted_assemblies (Transact-SQL)](system-catalog-views/sys-trusted-assemblies-transact-sql.md)
-6. [sys.dm_exec_query_parallel_workers (Transact-SQL)](system-dynamic-management-views/sys-dm-exec-query-parallel-workers-transact-sql.md)
-7. [sys.sp_add_trusted_assembly (Transact-SQL)](system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)
-8. [sys.sp_drop_trusted_assembly (Transact-SQL)](system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md)
+1. [Store JSON documents in SQL Server or SQL Database](json/store-json-documents-in-sql-tables.md)
+2. [SQL Vulnerability Assessment](security/sql-vulnerability-assessment.md)
+
+
+
+&nbsp;
+
+## Updated Articles with Excerpts
+
+This section displays the excerpts of updates gathered from articles that have recently experienced a large update.
+
+The excerpts displayed here appear separated from their proper semantic context. Also, sometimes an excerpt is separated from important markdown syntax that surrounds it in the actual article. Therefore these excerpts are for general guidance only. The excerpts only enable you to know whether your interests warrant taking the time to click and visit the actual article.
+
+For these and other reasons, do not copy code from these excerpts, and do not take as exact truth any text excerpt. Instead, visit the actual article.
+
 
 
 
@@ -58,21 +61,20 @@ The following links jump to new articles which have been added recently.
 
 <a name="compactupdatedlist"/>
 
-## Compact List of Articles Updated Recently
+### Compact List of Articles Updated Recently
 
-This compact list provides links to all the updated articles which are listed in the Excerpts section.
+This compact list provides links to all the updated articles that are listed in the Excerpts section.
 
+1. [Database File Initialization](#TitleNum_1)
+2. [tempdb Database](#TitleNum_2)
+3. [JSON data in SQL Server](#TitleNum_3)
+4. [Lesson 1: Connecting to the Database Engine](#TitleNum_4)
+5. [Manage the size of the transaction log file](#TitleNum_5)
+6. [bcp_bind](#TitleNum_6)
+7. [SQL Server Index Design Guide](#TitleNum_7)
+8. [sp_execute_external_script (Transact-SQL)](#TitleNum_8)
+9. [Create Primary Keys](#TitleNum_9)
 
-
-&nbsp;
-
-## Updated Articles with Excerpts
-
-This section displays the excerpts of updates gathered from articles which have recently experienced a large update.
-
-The excerpts displayed here appear separated from their proper semantic context. Also, sometimes an excerpt is separated from important markdown syntax that surrounds it in the actual article. Therefore these excerpts are for general guidance only. The excerpts only enable you to know whether your interests warrant taking the time to click and visit the actual article.
-
-For these and other reasons, do not copy code from these excerpts, and do not take as exact truth any text excerpt. Instead, visit the actual article.
 
 
 
@@ -82,40 +84,32 @@ For these and other reasons, do not copy code from these excerpts, and do not ta
 
 <a name="TitleNum_1"/>
 
-### 1. &nbsp; [Altering Memory-Optimized Tables](in-memory-oltp/altering-memory-optimized-tables.md)
+### 1. &nbsp; [Database File Initialization](databases/database-instant-file-initialization.md)
 
-*Updated: 2017-06-23* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Next](#TitleNum_2))
+*Updated: 2018-01-23* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Next](#TitleNum_2))
 
-<!-- Source markdown line 82.  ms.author= "genemi".  -->
+<!-- Source markdown line 81.  ms.author= "sstein".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 8359700b5db24838f1bb273526794c2865bbbe11 41d77cf0bbcf53a1b64d6524a24e5736c5a073da  (PR=2171  ,  Filename=altering-memory-optimized-tables.md  ,  Dirpath=docs\relational-databases\in-memory-oltp\  ,  MergeCommitSha40=7d2dbe0bdc4cbd05f11eacf938b35a9c35ace2e7) -->
+<!-- git diff --ignore-all-space --unified=0 c5f2aa53a8b43d4c43e0602cf945cb7c7028a27d 04c261c6588af1f53cda2fce3e9a86167c50b686  (PR=4702  ,  Filename=database-instant-file-initialization.md  ,  Dirpath=docs\relational-databases\databases\  ,  MergeCommitSha40=3206a31870f8febab7d1718fa59fe0590d4d45db) -->
 
 
 
-**Logging of ALTER TABLE on memory-optimized tables**
+```
+Database Instant File Initialization: disabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.
+```
 
-On a memory-optimized table, most ALTER TABLE scenarios now run in parallel and result in an optimization of writes to the transaction log. The optimization is achieved by only logging the metadata changes to the transaction log. However, the following ALTER TABLE operations run single-threaded and are not log-optimized.
+**Applies to:** SQL Server (Starting with SQL Server 2012 SP4, SQL Server 2014 SP2 and SQL Server 2016 through SQL Server 2017)
 
-The single-threaded operation in this case would log the entire content of the altered table to the transaction log. A list of single-threaded operations follows:
+**Security Considerations**
 
-- Alter or add a column to use a large object (LOB) type: nvarchar(max), varchar(max), or varbinary(max).
+When using Instant File Initialization (IFI), because the deleted disk content is overwritten only as new data is written to the files, the deleted content might be accessed by an unauthorized principal, until some other data writes on that specific area of the data file. While the database file is attached to the instance of SQL Server, this information disclosure risk is reduced by the discretionary access control list (DACL) on the file. This DACL allows file access only to the SQL Server service account and the local administrator. However, when the file is detached, it may be accessed by a user or service that does not have SE\_MANAGE\_VOLUME_NAME. A similar consideration exists when the database is backed up: if the backup file is not protected with an appropriate DACL, the deleted content can become available to an unauthorized user or service.
 
-- Add or drop a COLUMNSTORE index.
+Another consideration is that when a file is grown using IFI, a SQL Server administrator could potentially access the raw page contents and see the previously deleted content.
 
-- Almost anything that affects an [off-row column--../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md).
-
-    - Cause an on-row column to move off-row.
-
-    - Cause an off-row column to move on-row.
-
-    - Create a new off-row column.
-
-    - *Exception:* Lengthening an already off-row column is logged in the optimized way. 
-  
-
+If the database files are hosted on a storage area network, it is also possible that the storage area network always presents new pages as pre-initialized, and having the operating system re-initialize the pages might be unnecessary overhead.
 
 
 
@@ -127,37 +121,46 @@ The single-threaded operation in this case would log the entire content of the a
 
 <a name="TitleNum_2"/>
 
-### 2. &nbsp; [Table and Row Size in Memory-Optimized Tables](in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)
+### 2. &nbsp; [tempdb Database](databases/tempdb-database.md)
 
-*Updated: 2017-06-22* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_1) | [Next](#TitleNum_3))
+*Updated: 2018-01-17* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_1) | [Next](#TitleNum_3))
 
-<!-- Source markdown line 114.  ms.author= "genemi".  -->
+<!-- Source markdown line 100.  ms.author= "sstein".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 27ce0fa2e7bb464f9c3d6e32dd195de3b79abfcd 0a3cacd86024e2b734704ffd37e55ca0b17a0c94  (PR=2163  ,  Filename=table-and-row-size-in-memory-optimized-tables.md  ,  Dirpath=docs\relational-databases\in-memory-oltp\  ,  MergeCommitSha40=fe6de2b16b9792a5399b1c014af72a2a5ee52377) -->
+<!-- git diff --ignore-all-space --unified=0 337555ea28f4c3fdd6b78f1bfb4d62607a6bf92d 3257c92d6e2a88968fc44e5f6262c02cd0624635  (PR=0  ,  Filename=tempdb-database.md  ,  Dirpath=docs\relational-databases\databases\  ,  MergeCommitSha40=45e6082acc29ba306525e7c08d2c22cc2b86eec3) -->
 
 
 
- 
-  
- The calculation of [row body size] is discussed in the following table.  
-  
- There are two different computations for row body size: computed size and the actual size:  
-  
--   The computed size, denoted with [computed row body size], is used to determine if the row size limitation of 8,060 bytes is exceeded.  
-  
--   The actual size, denoted with [actual row body size], is the actual storage size of the row body in memory and in the checkpoint files.  
-  
- Both [computed row body size] and [actual row body size] are calculated similarly. The only difference is the calculation of the size of (n)varchar(i) and varbinary(i) columns, as reflected at the bottom of the following table. The computed row body size uses the declared size *i* as the size of the column, while the actual row body size uses the actual size of the data.  
-  
- The following table describes the calculation of the row body size, given as [actual row body size] = SUM([size of shallow types]) + 2 + 2 * [number of deep type columns].  
-  
-|Section|Size|Comments|  
-|-------------|----------|--------------|  
-|Shallow type columns|SUM([size of shallow types]). Size in bytes of the individual types is as follows:<br /><br /> **Bit**: 1<br /><br /> **Tinyint**: 1<br /><br /> **Smallint**: 2<br /><br /> **Int**: 4<br /><br /> **Real**: 4<br /><br /> **Smalldatetime**: 4<br /><br /> **Smallmoney**: 4<br /><br /> **Bigint**: 8<br /><br /> **Datetime**: 8<br /><br /> **Datetime2**: 8<br /><br /> **Float**: 8<br /><br /> **Money**: 8<br /><br /> **Numeric** (precision <=18): 8<br /><br /> **Time**: 8<br /><br /> **Numeric**(precision>18): 16<br /><br /> **Uniqueidentifier**: 16||  
-|Shallow column padding|Possible values are:<br /><br /> 1 if there are deep type columns and the total data size of the shallow columns is as odd number.<br /><br /> 0 otherwise|Deep types are the types (var)binary and (n)(var)char.|  
+ For a description of these database options, see [ALTER DATABASE SET Options (Transact-SQL)](databases/../../t-sql/statements/alter-database-transact-sql-set-options.md).
+
+**Tempdb database in SQL Database**
+
+
+|SLO|Max Tempdb Data File Size (MBs)|# of tempdb data files|Max tempdb data size (MB)|
+|---|---:|---:|---:|
+|Basic|14,225|1|14,225|
+|S0|14,225|1|14,225|
+|S1|14,225|1|14,225|
+|S2|14,225|	1|14,225|
+|S3|32,768|1|32,768|
+|S4|32,768|2|65,536|
+|S6|32,768|3|98,304|
+|S7|32,768|6|196,608|
+|S9|32,768|12|393,216|
+|S12|32,768|12|393,216|
+|P1|32,768|12|393,216|
+|P2|32,768|12|393,216|
+|P4|32,768|12|393,216|
+|P6|32,768|12|393,216|
+|P11|32,768|12|393,216|
+|P15|32,768|12|393,216|
+|Premium Elastic Pools (all DTU configurations)|14,225|12|170,700|
+|Standard Elastic Pools (all DTU configurations)|14,225|12|170,700|
+|Basic Elastic Pools (all DTU configurations)|14,225|12|170,700|
+||||
 
 
 
@@ -170,32 +173,40 @@ The single-threaded operation in this case would log the entire content of the a
 
 <a name="TitleNum_3"/>
 
-### 3. &nbsp; [Post-migration Validation and Optimization Guide](post-migration-validation-and-optimization-guide.md)
+### 3. &nbsp; [JSON data in SQL Server](json/json-data-sql-server.md)
 
-*Updated: 2017-06-21* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_2) | [Next](#TitleNum_4))
+*Updated: 2018-02-01* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_2) | [Next](#TitleNum_4))
 
-<!-- Source markdown line 27.  ms.author= "harinid".  -->
+<!-- Source markdown line 233.  ms.author= "douglasl".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 faa2e3dd8be3aeb475bf8c7f71617ebf17969892 f2760dfecda10baeb121929b72a4d8164e81185b  (PR=2126  ,  Filename=post-migration-validation-and-optimization-guide.md  ,  Dirpath=docs\relational-databases\  ,  MergeCommitSha40=dcbeda6b8372b358b6497f78d6139cad91c8097c) -->
+<!-- git diff --ignore-all-space --unified=0 62dd9c68d8cb72d6bf51b941a0731224514f0a7f 19e276637a463b412f2c29a84f9fb7d0b0f5fcc5  (PR=4783  ,  Filename=json-data-sql-server.md  ,  Dirpath=docs\relational-databases\json\  ,  MergeCommitSha40=73f18ae24a9a48234bf997ee9a2ef441bc4918b9) -->
 
 
 
-Below are some of the common performance scenarios encountered after migrating to [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)] Platform and how to resolve them. These include scenarios that are specific to [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)] to [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)] migration (older versions to newer versions), as well as foreign platform (such as Oracle, DB2, MySQL and Sybase) to [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)] migration.
+-   [Load GeoJSON data into SQL Server 2016](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/05/loading-geojson-data-into-sql-server/)
 
-**<a name="CEUpgrade"></a> Query regressions due to change in CE version**
+**Analyze JSON data with SQL queries**
 
+If you must filter or aggregate JSON data for reporting purposes, you can use **OPENJSON** to transform JSON to relational format. You can then use standard Transact-SQL and built-in functions to prepare the reports.
 
-**Applies to:** [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)] to [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)] migration.
-
-When migrating from an older versions of [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)] to [!INCLUDE[ssSQL14--../includes/sssql14-md.md)] or newer, and upgrading the [database compatibility level--../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) to the latest one, a workload may be exposed to the risk of performance regression.
-
-This is because starting with [!INCLUDE[ssSQL14--../includes/sssql14-md.md)], all Query Optimizer changes are tied to the latest [database compatibility level--../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md), so plans are not changed right at point of upgrade but rather when a user changes the `COMPATIBILITY_LEVEL` database option to the latest one. This capability, in combination with Query Store gives you a great level of control over the query performance in the upgrade process. 
-
-For more information on Query Optimizer changes introduced in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], see [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](http://msdn.microsoft.com/library/dn673537.aspx).
-
+```
+SELECT Tab.Id, SalesOrderJsonData.Customer, SalesOrderJsonData.Date
+FROM   SalesOrderRecord AS Tab
+          CROSS APPLY
+     OPENJSON (Tab.json, N'$.Orders.OrdersArray')
+           WITH (
+              Number   varchar(200) N'$.Order.Number',
+              Date     datetime     N'$.Order.Date',
+              Customer varchar(200) N'$.AccountNumber',
+              Quantity int          N'$.Item.Quantity'
+           )
+  AS SalesOrderJsonData
+WHERE JSON_VALUE(Tab.json, '$.Status') = N'Closed'
+ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified
+```
 
 
 
@@ -207,86 +218,338 @@ For more information on Query Optimizer changes introduced in [!INCLUDE[ssSQL14]
 
 <a name="TitleNum_4"/>
 
-### 4. &nbsp; [sys.query_store_plan (Transact-SQL)](system-catalog-views/sys-query-store-plan-transact-sql.md)
+### 4. &nbsp; [Lesson 1: Connecting to the Database Engine](lesson-1-connecting-to-the-database-engine.md)
 
-*Updated: 2017-06-05* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_3))
+*Updated: 2017-12-13* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_3) | [Next](#TitleNum_5))
 
-<!-- Source markdown line 58.  ms.author= "rickbyh".  -->
+<!-- Source markdown line 79.  ms.author= "rickbyh".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 3c070935895450fd2ea054e2be9e1c48f7dc2b6c 0c386e3d47fb7f8f1e63b9301f0cafec2bc88ab0  (PR=4282  ,  Filename=lesson-1-connecting-to-the-database-engine.md  ,  Dirpath=docs\relational-databases\  ,  MergeCommitSha40=6e016a4ffd28b09456008f40ff88aef3d911c7ba) -->
+
+
+
+2.  Select **Database Engine**.
+
+    ![object-explorer](../relational-databases/media/object-explorer.png)
+
+3.  In the **Server name** box, type the name of the instance of the Database Engine. For the default instance of SQL Server, the server name is the computer name. For a named instance of SQL Server, the server name is the *<computer_name>***\\***<instance_name>,* such as **ACCTG_SRVR\SQLEXPRESS**. The following screenshot shows connecting to the default (un-named) instance of SQL Server on a computer named 'PracticeComputer'. The user logged into Windows is Mary from the Contoso domain. When using Windows Authentication you cannot change the user name.
+
+    ![connect-to-server](../relational-databases/media/connect-to-server.png)
+
+4.  Click **Connect**.
+
+> [!NOTE]
+> This tutorial assumes you are new to SQL Server and have no special problems connecting. This should be sufficient for most people and this keeps this tutorial simple. For detailed troubleshooting steps, see [Troubleshooting Connecting to the SQL Server Database Engine](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md).
+
+**<a name="additional"></a>Authorizing Additional Connections**
+
+Now that you have connected to SQL Server as an administrator, one of your first tasks is to authorize other users to connect. You do this by creating a login and authorizing that login to access a database as a user. Logins can be either Windows Authentication logins, which use credentials from Windows, or SQL Server Authentication logins, which store the authentication information in SQL Server and are independent of your Windows credentials. Use Windows Authentication whenever possible.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_5"/>
+
+### 5. &nbsp; [Manage the size of the transaction log file](logs/manage-the-size-of-the-transaction-log-file.md)
+
+*Updated: 2018-01-17* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_4) | [Next](#TitleNum_6))
+
+<!-- Source markdown line 105.  ms.author= "jhubbard".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 1b77e34309ba7033578b3c82ed83c8c2fbc93e24 ce4ade9ab906c35cb87068a1fb91c4e1d7549aac  (PR=1940  ,  Filename=sys-query-store-plan-transact-sql.md  ,  Dirpath=docs\relational-databases\system-catalog-views\  ,  MergeCommitSha40=1d363db8e8bd0e1460cdea3c3a7add68e48714c9) -->
+<!-- git diff --ignore-all-space --unified=0 5847b31cf8f6003a380f0c8aaa289efdc55be678 84e45320d81db218cde17fbf8b9668a9ac3805a7  (PR=0  ,  Filename=manage-the-size-of-the-transaction-log-file.md  ,  Dirpath=docs\relational-databases\logs\  ,  MergeCommitSha40=45e6082acc29ba306525e7c08d2c22cc2b86eec3) -->
 
 
 
-**Plan forcing limitations**
+-   A small growth increment can generate too many small [VLFs](logs/../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) and can reduce performance. To determine the optimal VLF distribution for the current transaction log size of all databases in a given instance, and the required growth increments to achieve the required size, see this [script](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
 
-Query Store has a mechanism to enforce Query Optimizer to use certain execution plan. 
-However, there are some limitations that can prevent a plan to be enforced. 
+-   A large growth increment can generate too few and large [VLFs](logs/../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) and can also affect performance. To determine the optimal VLF distribution for the current transaction log size of all databases in a given instance, and the required growth increments to achieve the required size, see this [script](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
 
-First, if the plan contains following constructions:
-* Insert bulk statement.
-* Insert bulk statement.
-* Reference to an external table
-* Distributed query or full-text operations
-* Use of Global queries 
-* Cursors
-* Invalid star join specification 
+-   Even with autogrow enabled, you can receive a message that the transaction log is full, if it cannot grow fast enough to satisfy the needs of your query. For more information on changing the growth increment, see [ALTER DATABASE &#40;Transact-SQL&#41; File and Filegroup options](logs/../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)
 
-Second, when objects that plan relies on, are no longer available:
-* Database (if Database, where plan originated, does not exist anymore)
-* Index (no longer there or disabled)
+-   Having multiple log files in a database does not enhance performance in any way, because the transaction log files do not use [proportional fill](logs/../../relational-databases/pages-and-extents-architecture-guide.md#ProportionalFill) like data files in a same filegroup.
 
-Finally, problems with the plan itself:
-* Not legal for query
-* Query Optimizer exceeded number of allowed operations
-* Incorrectly formed plan XML
+-   Log files can be set to shrink automatically. However this is **not recommended**, and the **auto_shrink** database property is set to FALSE by default. If **auto_shrink** is set to TRUE, automatic shrinking reduces the size of a file only when more than 25 percent of its space is unused.
 
 
-
-
-
-<a name="similars2"/>
 
 &nbsp;
 
-## Similar Articles
+&nbsp;
 
-This section lists very similar articles for recently updated articles in other subject areas, within the same GitHub.com repository: [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/).
+---
 
-<!--  20170717-1101  -->
+<a name="TitleNum_6"/>
 
-#### Subject areas which do have new or recently updated articles
+### 6. &nbsp; [bcp_bind](native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)
 
-- [New + Updated (4+4) : **Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
-- [New + Updated (2+0) : **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
-- [New + Updated (1+2) : **Connect to SQL** docs](../connect/new-updated-connect.md)
-- [New + Updated (6+0) : **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
-- [New + Updated (13+2): **Linux for SQL** docs](../linux/new-updated-linux.md)
-- [New + Updated (1+0) : **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
-- [New + Updated (1+0) : **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
-- [New + Updated (8+4) : **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
-- [New + Updated (2+2) : **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
-- [New + Updated (0+1) : **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
-- [New + Updated (1+0) : **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
-- [New + Updated (1+0) : **Tools for SQL** docs](../tools/new-updated-tools.md)
+*Updated: 2018-01-30* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_5) | [Next](#TitleNum_7))
+
+<!-- Source markdown line 127.  ms.author= "genemi".  -->
+
+&nbsp;
 
 
-#### Subject areas which have no new or recently updated articles
+<!-- git diff --ignore-all-space --unified=0 d50791cef948ce8b3066438e317ab4d34d535258 e6f70559e7237cfc86dfc5746d218c08bec52af6  (PR=4762  ,  Filename=bcp-bind.md  ,  Dirpath=docs\relational-databases\native-client-odbc-extensions-bulk-copy-functions\  ,  MergeCommitSha40=60006e90d03fdb75b282bbc0dad3d40571bacacc) -->
 
+
+
+ The following table lists valid enumerated data types and the corresponding ODBC C data types.
+
+|eDataType|C type|
+|-----------------------|------------|
+|SQLTEXT|char *|
+|SQLNTEXT|wchar_t *|
+|SQLCHARACTER|char *|
+|SQLBIGCHAR|char *|
+|SQLVARCHAR|char *|
+|SQLBIGVARCHAR|char *|
+|SQLNCHAR|wchar_t *|
+|SQLNVARCHAR|wchar_t *|
+|SQLBINARY|unsigned char *|
+|SQLBIGBINARY|unsigned char *|
+|SQLVARBINARY|unsigned char *|
+|SQLBIGVARBINARY|unsigned char *|
+|SQLBIT|char|
+|SQLBITN|char|
+|SQLINT1|char|
+|SQLINT2|short int|
+|SQLINT4|int|
+|SQLINT8|_int64|
+|SQLINTN|*cbIndicator*<br /> 1: SQLINT1<br /> 2: SQLINT2<br /> 4: SQLINT4<br /> 8: SQLINT8|
+|SQLFLT4|float|
+|SQLFLT8|float|
+|SQLFLTN|*cbIndicator*<br /> 4: SQLFLT4<br /> 8: SQLFLT8|
+|SQLDECIMALN|SQL_NUMERIC_STRUCT|
+|SQLNUMERICN|SQL_NUMERIC_STRUCT|
+|SQLMONEY|DBMONEY|
+|SQLMONEY4|DBMONEY4|
+|SQLMONEYN|*cbIndicator*<br /> 4: SQLMONEY4<br /> 8: SQLMONEY|
+|SQLTIMEN|SQL_SS_TIME2_STRUCT|
+|SQLDATEN|SQL_DATE_STRUCT|
+|SQLDATETIM4|DBDATETIM4|
+|SQLDATETIME|DBDATETIME|
+|SQLDATETIMN|*cbIndicator*<br /> 4: SQLDATETIM4<br /> 8: SQLDATETIME|
+|SQLDATETIME2N|SQL_TIMESTAMP_STRUCT|
+|SQLDATETIMEOFFSETN|SQL_SS_TIMESTAMPOFFSET_STRUCT|
+|SQLIMAGE|unsigned char *|
+|SQLUDT|unsigned char *|
+|SQLUNIQUEID|SQLGUID|
+|SQLVARIANT|*Any data type except:*<br />-   text<br />-   ntext<br />-   image<br />-   varchar(max)<br />-   varbinary(max)<br />-   nvarchar(max)<br />-   xml<br />-   timestamp|
+|SQLXML|*Supported C data types:*<br />-   char*<br />-   wchar_t *<br />-   unsigned char *|
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_7"/>
+
+### 7. &nbsp; [SQL Server Index Design Guide](sql-server-index-design-guide.md)
+
+*Updated: 2018-01-02* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_6) | [Next](#TitleNum_8))
+
+<!-- Source markdown line 700.  ms.author= "rickbyh".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 bd09c9e66cd3cf5f3ebebe7ffa6e937978353169 8e5cbbf0063971676a8bafefba75aa5c7c28be61  (PR=0  ,  Filename=sql-server-index-design-guide.md  ,  Dirpath=docs\relational-databases\  ,  MergeCommitSha40=74daee358fef75a25d75c69d971d08536c5bd2be) -->
+
+
+
+Starting with SQL Server 2016, you can create an updatable **nonclustered columnstore index on a rowstore table**. The columnstore index stores a copy of the data so you do need extra storage. However, the data in the columnstore index will compress to a smaller size than the rowstore table requires.  By doing this, you can run analytics on the columnstore index and transactions on the rowstore index at the same time. The column store is updated when data changes in the rowstore table, so both indexes are working against the same data.
+
+Starting with SQL Server 2016, you can have **one or more nonclustered rowstore indexes on a columnstore index**. By doing this, you can perform efficient table seeks on the underlying columnstore. Other options become available too. For example, you can enforce a primary key constraint by using a UNIQUE constraint on the rowstore table. Since an non-unique value will fail to insert into the rowstore table, SQL Server cannot insert the value into the columnstore.
+
+**Performance considerations**
+
+
+-   The nonclustered columnstore index definition supports using a filtered condition. To minimize the performance impact of adding a columnstore index on an OLTP table, use a filtered condition to create a nonclustered columnstore index on only the cold data of your operational workload.
+
+-   An in-memory table can have one columnstore index. You can create it when the table is created or add it later with [ALTER TABLE &#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md). Before SQL Server 2016, only a disk-based table could have a columnstore index.
+
+For more information, refer to [Columnstore indexes - Query performance](../relational-databases/indexes/columnstore-indexes-query-performance.md).
+
+**Design Guidance**
+
+
+-   A rowstore table can have one updateable nonclustered columnstore index. Before SQL Server 2014, the nonclustered columnstore index was read-only.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_8"/>
+
+### 8. &nbsp; [sp_execute_external_script (Transact-SQL)](system-stored-procedures/sp-execute-external-script-transact-sql.md)
+
+*Updated: 2018-01-23* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_7) | [Next](#TitleNum_9))
+
+<!-- Source markdown line 207.  ms.author= "edmaca".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 0ee4d591ae9d9a5c015eec98aad9ccbb86268761 ac9b439c23ffae5fcc77639de6ff955763cf5844  (PR=4696  ,  Filename=sp-execute-external-script-transact-sql.md  ,  Dirpath=docs\relational-databases\system-stored-procedures\  ,  MergeCommitSha40=d7dcbcebbf416298f838a39dd5de6a46ca9f77aa) -->
+
+
+
+To generate a similar model using Python, you would change the language identifier from `@language=N'R'` to `@language = N'Python'`, and make necessary modifications to the `@script` argument. Otherwise, all parameters function the same way as for R.
+
+**C. Create a Python model and generate scores from it**
+
+
+This example illustrates how to use sp\_execute\_external\_script to generate scores on a simple Python model.
+
+```
+CREATE PROCEDURE [dbo].[py_generate_customer_scores]
+AS
+BEGIN
+
+**Input query to generate the customer data**
+
+DECLARE @input_query NVARCHAR(MAX) = N'SELECT customer, orders, items, cost FROM dbo.Sales.Orders`
+
+EXEC sp_execute_external_script @language = N'Python', @script = N'
+import pandas as pd
+from sklearn.cluster import KMeans
+
+**Get data from input query**
+
+customer_data = my_input_data
+
+**Define the model**
+
+n_clusters = 4
+est = KMeans(n_clusters=n_clusters, random_state=111).fit(customer_data[["orders","items","cost"]])
+clusters = est.labels_
+customer_data["cluster"] = clusters
+
+OutputDataSet = customer_data
+'
+, @input_data_1 = @input_query
+, @input_data_1_name = N'my_input_data'
+WITH RESULT SETS (("CustomerID" int, "Orders" float,"Items" float,"Cost" float,"ClusterResult" float));
+END;
+GO
+```
+
+Column headings used in Python code are not output to SQL Server; therefore, use the WITH RESULTS statement to specify the column names and data types for SQL to use.
+
+For scoring, you can also use the native [PREDICT](system-stored-procedures/../../t-sql/queries/predict-transact-sql.md) function, which is typically faster because it avoids calling the Python or R runtime.
+
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_9"/>
+
+### 9. &nbsp; [Create Primary Keys](tables/create-primary-keys.md)
+
+*Updated: 2018-01-18* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_8))
+
+<!-- Source markdown line 102.  ms.author= "sstein".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 d18b485f314cc005d624cab8a51650d3b8f55f89 9bd2e9453206e8940d30b0a01c43f9d8e1aed606  (PR=4652  ,  Filename=create-primary-keys.md  ,  Dirpath=docs\relational-databases\tables\  ,  MergeCommitSha40=6b4aae3706247ce9b311682774b13ac067f60a79) -->
+
+
+
+**To create a primary key with nonclustered index in a new table**
+
+
+1.  In **Object Explorer**, connect to an instance of Database Engine.
+
+2.  On the Standard bar, click **New Query**.
+
+3.  Copy and paste the following example into the query window and click **Execute**. The example creates a table and defines a primary key on the column `CustomerID` and a clustered index on `TransactionID`.
+
+```
+    USE AdventureWorks2012;
+    GO
+    CREATE TABLE Production.TransactionHistoryArchive1
+    (
+       CustomerID uniqueidentifier DEFAULT NEWSEQUENTIALID(),
+       TransactionID int IDENTITY (1,1) NOT NULL,
+       CONSTRAINT PK_TransactionHistoryArchive_TransactionID PRIMARY KEY NONCLUSTERED (uniqueidentifier)
+    );
+    GO
+
+    -- Now add the clustered index
+    CREATE CLUSTERED INDEX CIX_TransactionID ON Production.TransactionHistoryArchive1 (TransactionID);
+    GO
+```
+
+
+
+
+
+
+
+## Similar articles about new or updated articles
+
+This section lists very similar articles for recently updated articles in other subject areas, within our public GitHub.com repository: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
+
+
+#### Subject areas that *do* have new or recently updated articles
+
+
+- [New + Updated (1+3):&nbsp; **Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [New + Updated (0+1):&nbsp; **Analytics Platform System for SQL** docs](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [New + Updated (0+1):&nbsp; **Connect to SQL** docs](../connect/new-updated-connect.md)
+- [New + Updated (0+1):&nbsp; **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
+- [New + Updated (12+1): **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
+- [New + Updated (6+2):&nbsp; **Linux for SQL** docs](../linux/new-updated-linux.md)
+- [New + Updated (15+0): **PowerShell for SQL** docs](../powershell/new-updated-powershell.md)
+- [New + Updated (2+9):&nbsp; **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
+- [New + Updated (1+0):&nbsp; **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
+- [New + Updated (1+1):&nbsp; **SQL Operations Studio** docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [New + Updated (1+1):&nbsp; **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
+- [New + Updated (0+1):&nbsp; **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
+- [New + Updated (1+2):&nbsp; **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
+- [New + Updated (0+2):&nbsp; **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
+
+
+
+#### Subject areas that do *not* have any new or recently updated articles
+
+
+- [New + Updated (0+0): **Data Migration Assistant (DMA) for SQL** docs](../dma/new-updated-dma.md)
 - [New + Updated (0+0): **ActiveX Data Objects (ADO) for SQL** docs](../ado/new-updated-ado.md)
+- [New + Updated (0+0): **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
 - [New + Updated (0+0): **Data Quality Services for SQL** docs](../data-quality-services/new-updated-data-quality-services.md)
 - [New + Updated (0+0): **Data Mining Extensions (DMX) for SQL** docs](../dmx/new-updated-dmx.md)
-- [New + Updated (0+0): **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
+- [New + Updated (0+0): **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
 - [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs](../mdx/new-updated-mdx.md)
-- [New + Updated (0+0): **PowerShell for SQL** docs](../powershell/new-updated-powershell.md)
-- [New + Updated (0+0): **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
+- [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
 - [New + Updated (0+0): **Samples for SQL** docs](../sample/new-updated-sample.md)
-- [New + Updated (0+0): **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
 - [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
+- [New + Updated (0+0): **Tools for SQL** docs](../tools/new-updated-tools.md)
 - [New + Updated (0+0): **XQuery for SQL** docs](../xquery/new-updated-xquery.md)
 
-
-&nbsp;
 

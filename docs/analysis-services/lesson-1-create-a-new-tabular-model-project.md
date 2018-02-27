@@ -2,11 +2,14 @@
 title: "Lesson 1: Create a New Tabular Model Project | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/27/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services, azure-analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 applies_to: 
@@ -15,7 +18,8 @@ ms.assetid: 0d2eb34d-78c8-41ff-b92d-49b62c16b2ac
 caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Active"
 ---
 # Lesson 1: Create a New Tabular Model Project
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -84,7 +88,7 @@ Explore some of the dialogs and locations for various features specific to autho
 
 
 ## Additional resources
-To learn more about the different types of tabular model projects, see [Tabular Model Projects &#40;SSAS Tabular&#41;](../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md). To learn more about the tabular model authoring environment, see [Tabular Model Designer &#40;SSAS&#41;](../analysis-services/tabular-models/tabular-model-designer-ssas.md).  
+To learn more about the different types of tabular model projects, see [Tabular Model Projects](../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md). To learn more about the tabular model authoring environment, see [Tabular Model Designer ](../analysis-services/tabular-models/tabular-model-designer-ssas.md).  
   
 
 ## What's next?

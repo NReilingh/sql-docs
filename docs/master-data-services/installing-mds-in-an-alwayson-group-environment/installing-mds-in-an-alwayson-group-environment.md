@@ -1,25 +1,28 @@
 ---
-title: "Install Master Data Services in an AlwaysOn Environment | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "06/03/2017"
-ms.prod: "sql-server-2016"
+title: "High Availability and Disaster Recovery for Master Data Services | Microsoft Docs"
+ms.custom: ""
+ms.date: "07/28/2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "mds"
+ms.service: ""
+ms.component: "installing-mds-in-an-alwayson-group-environment"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: ""
 caps.latest.revision: ""
-author: "sabotta"
-ms.author: "carlasab"
+author: "smartysanthosh"
+ms.author: "nagavo"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 
 
 
-# Installing Master Data Services in an AlwaysOn Environment
+# High Availability and Disaster Recovery for Master Data Services
 
 **Summary:** This article describes a solution for Master Data Service
 (MDS) hosted on AlwaysOn Availability Group configuration. The article

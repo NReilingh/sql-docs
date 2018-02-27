@@ -2,9 +2,12 @@
 title: "Change the Environment Layout | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-tutorial"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -13,11 +16,13 @@ applies_to:
   - "SQL Server 2016"
 ms.assetid: ce118ee5-70e2-472e-8e09-7ed3bfed59fa
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Lesson 1-3 - Change the Environment Layout
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 The components of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] compete for screen space. To make more room, you can close, hide, or move [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] components. The practices on this page move the components to different locations.  
   
 ## Closing and Hiding Components  

@@ -1,21 +1,17 @@
 ---
 title: Updated - Connect to SQL Server docs | Microsoft Docs
 description: Display snippets of updated content for recently changed in documentation, for Connect to Microsoft SQL Server.
-services: na
-documentationcenter: ''
+
+manager: craigg
 author: MightyPen
-manager: jhubbard
-editor: ''
-ms.service: na
-ms.topic: updart-autogen
-ms.technology: database-engine
-ms.custom: UpdArt.exe
-ms.tgt_pltfrm: na
-ms.devlang: na
-ms.topic: updart-autogen
-ms.date: 07/17/2017
 ms.author: genemi
-ms.workload: connect-to-sql
+ms.topic: article
+ms.custom: UpdArt.exe
+ms.suite: sql
+ms.prod_service: sql-non-specified
+
+ms.component: connect
+ms.date: 02/03/2018
 ---
 # New and Recently Updated: Connect to SQL Server
 
@@ -29,7 +25,7 @@ Recent updates are reported for the following date range and subject:
 
 
 
-- *Date range of updates:* &nbsp; **2017-05-23** &nbsp; -to- &nbsp; **2017-07-17**
+- *Date range of updates:* &nbsp; **2017-12-03** &nbsp; -to- &nbsp; **2018-02-03**
 - *Subject area:* &nbsp; **Connect to SQL Server**.
 
 
@@ -39,40 +35,10 @@ Recent updates are reported for the following date range and subject:
 
 ## New Articles Created Recently
 
-The following links jump to new articles which have been added recently.
+The following links jump to new articles that have been added recently.
 
 
-1. [FIPS Mode](jdbc/fips-mode.md)
- 
-<!-- Really just file moves.
-3. [Custom Keystore Providers](odbc/custom-keystore-providers.md)
-4. [Connecting with bcp](odbc/linux-mac/connecting-with-bcp.md)
-5. [Connecting with sqlcmd](odbc/linux-mac/connecting-with-sqlcmd.md)
-6. [Connection String Keywords and Data Source Names (DSNs)](odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)
-7. [Data Access Tracing with the ODBC Driver on Linux and macOS](odbc/linux-mac/data-access-tracing-with-the-odbc-driver-on-linux.md)
-8. [Frequently Asked Questions (FAQ) for ODBC Linux and macOS](odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)
-9. [Installing the Driver Manager](odbc/linux-mac/installing-the-driver-manager.md)
-10. [Installing the Microsoft ODBC Driver for SQL Server on Linux and macOS](odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
-11. [Known Issues in this Version of the Driver](odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
-12. [ODBC Driver on Linux and macOS Support for High Availability and Disaster Recovery](odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)
-13. [Programming Guidelines](odbc/linux-mac/programming-guidelines.md)
-14. [Release Notes for the Microsoft ODBC Driver for SQL Server on Linux and macOS](odbc/linux-mac/release-notes.md)
-15. [System Requirements](odbc/linux-mac/system-requirements.md)
-16. [Using Integrated Authentication](odbc/linux-mac/using-integrated-authentication.md)
-17. [Using Always Encrypted with the ODBC Driver 13.1 for SQL Server](odbc/using-always-encrypted-with-the-odbc-driver.md)
-18. [Using Azure Active Directory with the ODBC Driver](odbc/using-azure-active-directory.md)
-19. [Using Transparent Network IP Resolution](odbc/using-transparent-network-ip-resolution.md)
--->
-
-
-
-&nbsp;
-
-<a name="compactupdatedlist"/>
-
-## Compact List of Articles Updated Recently
-
-This compact list provides links to all the updated articles which are listed in the Excerpts section.
+***There are no new articles to list, this time.***
 
 
 
@@ -80,11 +46,26 @@ This compact list provides links to all the updated articles which are listed in
 
 ## Updated Articles with Excerpts
 
-This section displays the excerpts of updates gathered from articles which have recently experienced a large update.
+This section displays the excerpts of updates gathered from articles that have recently experienced a large update.
 
 The excerpts displayed here appear separated from their proper semantic context. Also, sometimes an excerpt is separated from important markdown syntax that surrounds it in the actual article. Therefore these excerpts are for general guidance only. The excerpts only enable you to know whether your interests warrant taking the time to click and visit the actual article.
 
 For these and other reasons, do not copy code from these excerpts, and do not take as exact truth any text excerpt. Instead, visit the actual article.
+
+
+
+
+
+&nbsp;
+
+<a name="compactupdatedlist"/>
+
+### Compact List of Articles Updated Recently
+
+This compact list provides links to all the updated articles that are listed in the Excerpts section.
+
+1. [Using Always Encrypted with the ODBC Driver for SQL Server](#TitleNum_1)
+
 
 
 
@@ -94,152 +75,87 @@ For these and other reasons, do not copy code from these excerpts, and do not ta
 
 <a name="TitleNum_1"/>
 
-### 1. &nbsp; [Download ODBC Driver for SQL Server](odbc/download-odbc-driver-for-sql-server.md)
+### 1. &nbsp; [Using Always Encrypted with the ODBC Driver for SQL Server](odbc/using-always-encrypted-with-the-odbc-driver.md)
 
-*Updated: 2017-05-26* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Next](#TitleNum_2))
+*Updated: 2018-01-22* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 
-<!-- Source markdown line 29.  ms.author= "genemi".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 897f2c162bb10b137d167ced6e6ca4eecb309a71 2b472e0b20f02e523902aa3acc79257ec0f8af3f  (PR=1835  ,  Filename=download-odbc-driver-for-sql-server.md  ,  Dirpath=docs\connect\odbc\  ,  MergeCommitSha40=760437811d11be3c91dd47b7418979e2fc11f660) -->
-
-
-
-- [Debian 8 .deb packages](https://packages.microsoft.com/debian/8/prod/pool/main/m/msodbcsql/)
-- [RedHat 6 .rpm packages](https://packages.microsoft.com/rhel/6.8/prod/)
-- [RedHat 7 .rpm packages](https://packages.microsoft.com/rhel/7/prod/)
-- [SuSE 12 .rpm packages](https://packages.microsoft.com/sles/12/prod/)
-- [Ubuntu 15.10 .deb packages](https://packages.microsoft.com/ubuntu/15.10/prod/pool/main/m/msodbcsql/)
-- [Ubuntu 16.04 .deb packages](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/)
-- [Ubuntu 16.10 .deb packages](https://packages.microsoft.com/ubuntu/16.10/prod/pool/main/m/msodbcsql/)
-
-- [OS X 10.11 and macOS 10.12 Homebrew formulae](https://github.com/Microsoft/homebrew-mssql-release)
-
-See also [Installing the Driver--../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
-
-**Microsoft ODBC Driver 13 for SQL Server  **
-
-
-**All Platforms  **
-
-
-- [Download the Microsoft ODBC Driver 13 for SQL Server - All Platforms](https://www.microsoft.com/download/details.aspx?id=50420)
-
-**Windows**
-
-
-- [Download the Microsoft Command Line Utilities 13 for SQL Server](https://www.microsoft.com/download/details.aspx?id=52680)
-
-**Microsoft ODBC Driver 11 for SQL Server  **
-
-
-**Windows**
-
-
-- [Download the Microsoft ODBC Driver 11 for SQL Server on Windows](https://www.microsoft.com/download/details.aspx?id=36434)  
-
-- [Download the Microsoft Command Line Utilities 11 for SQL Server](https://www.microsoft.com/download/details.aspx?id=36433)  
-
-**Linux**
-
-
-- **Red Hat Enterprise Linux 5 and 6 (64-bit)** [Download Microsoft ODBC Driver 11 for SQL Server - Red Hat Linux](http://go.microsoft.com/fwlink/?LinkId=267321)  
-
-
-
-
-&nbsp;
-
-&nbsp;
-
----
-
-<a name="TitleNum_2"/>
-
-### 2. &nbsp; [Microsoft ODBC Driver for SQL Server](odbc/microsoft-odbc-driver-for-sql-server.md)
-
-*Updated: 2017-05-26* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_1))
-
-<!-- Source markdown line 29.  ms.author= "genemi".  -->
+<!-- Source markdown line 524.  ms.author= "v-chojas".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 f3c737f9b788a330835ca7d9492b617cc71d5d04 f909b2ca7781677a085e3502c680fce2ef1558a6  (PR=1835  ,  Filename=microsoft-odbc-driver-for-sql-server.md  ,  Dirpath=docs\connect\odbc\  ,  MergeCommitSha40=760437811d11be3c91dd47b7418979e2fc11f660) -->
+<!-- git diff --ignore-all-space --unified=0 a52abae2a8f27c3b5bc411ef758610116a608f9f 352368eb269b98ab5ca3a9791fae2e70bf26277a  (PR=4686  ,  Filename=using-always-encrypted-with-the-odbc-driver.md  ,  Dirpath=docs\connect\odbc\  ,  MergeCommitSha40=82c9868b5bf95e5b0c68137ba434ddd37fc61072) -->
 
 
 
-**Linux and macOS**
+**Retrieve data in parts with SQLGetData**
+
+Before ODBC Driver 17 for SQL Server, encrypted character and binary columns cannot be retrieved in parts with SQLGetData. Only one call to SQLGetData can be made, with a buffer of sufficient length to contain the entire column's data.
+
+**Send data in parts with SQLPutData**
+
+Data for insertion or comparison cannot be sent in parts with SQLPutData. Only one call to SQLPutData can be made, with a buffer containing the entire data. For inserting long data into encrypted columns, use the Bulk Copy API, described in the next section, with an input data file.
+
+**Encrypted money and smallmoney**
+
+Encrypted **money** or **smallmoney** columns cannot be targeted by parameters, since there is no specific ODBC data type which maps to those types, resulting in Operand Type Clash errors.
+
+**Bulk Copy of Encrypted Columns**
 
 
-- [Installing the Driver--../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
-- [Connecting with **bcp**--../../connect/odbc/linux-mac/connecting-with-bcp.md)
-- [Connecting with **sqlcmd**--../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)
-- [Using Integrated Authentication (Kerberos)--../../connect/odbc/linux-mac/using-integrated-authentication.md)
-- [Connection String Keywords and Data Source Names--../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)
-- [Data Access Tracing--../../connect/odbc/linux-mac/data-access-tracing-with-the-odbc-driver-on-linux.md)
-- [Frequently Asked Questions--../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)
-- [Installing the Driver Manager--../../connect/odbc/linux-mac/installing-the-driver-manager.md)
-- [Known Issues--../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
-- [Programming Guidelines--../../connect/odbc/linux-mac/programming-guidelines.md)
-- [Release Notes--../../connect/odbc/linux-mac/release-notes.md)
-- [Support for High Availability and Disaster Recovery--../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)
+Use of the [SQL Bulk Copy functions](odbc/../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md) and the **bcp** utility is supported with Always Encrypted since ODBC Driver 17 for SQL Server. Both plaintext (encrypted on insertion and decrypted on retrieval) and ciphertext (transferred verbatim) can be inserted and retrieved using the Bulk Copy (bcp_*) APIs and the **bcp** utility.
 
-**Windows**
+- To retrieve ciphertext in varbinary(max) form (e.g. for bulk loading into a different database), connect without the `ColumnEncryption` option (or set it to `Disabled`) and perform a BCP OUT operation.
 
+- To insert and retrieve plaintext, and let the driver transparently perform encryption and decryption as required, setting `ColumnEncryption` to `Enabled` is sufficient. The functionality of the BCP API is otherwise unchanged.
 
-- [Asynchronous Execution (Notification Method) Sample--../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md)
-- [Connection Resiliency in the Windows ODBC Driver--../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)
-- [Driver-Aware Connection Pooling--../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)
-- [Features and Behavior Changes--../../connect/odbc/windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md)
-- [Release Notes--../../connect/odbc/windows/release-notes.md)
-
+- To insert ciphertext in varbinary(max) form (e.g. as retrieved above), set the `BCPMODIFYENCRYPTED` option to TRUE and perform a BCP IN operation. In order for the resulting data to be decryptable, ensure that the destination column's CEK is the same as that from which the ciphertext was originally obtained.
 
 
 
 
-<a name="similars2"/>
-
-&nbsp;
-
-## Similar Articles
-
-This section lists very similar articles for recently updated articles in other subject areas, within the same GitHub.com repository: [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/).
-
-<!--  20170717-1101  -->
-
-#### Subject areas which do have new or recently updated articles
-
-- [New + Updated (4+4) : **Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
-- [New + Updated (2+0) : **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
-- [New + Updated (1+2) : **Connect to SQL** docs](../connect/new-updated-connect.md)
-- [New + Updated (6+0) : **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
-- [New + Updated (13+2): **Linux for SQL** docs](../linux/new-updated-linux.md)
-- [New + Updated (1+0) : **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
-- [New + Updated (1+0) : **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
-- [New + Updated (8+4) : **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
-- [New + Updated (2+2) : **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
-- [New + Updated (0+1) : **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
-- [New + Updated (1+0) : **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
-- [New + Updated (1+0) : **Tools for SQL** docs](../tools/new-updated-tools.md)
 
 
-#### Subject areas which have no new or recently updated articles
 
+## Similar articles about new or updated articles
+
+This section lists very similar articles for recently updated articles in other subject areas, within our public GitHub.com repository: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
+
+
+#### Subject areas that *do* have new or recently updated articles
+
+
+- [New + Updated (1+3):&nbsp; **Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [New + Updated (0+1):&nbsp; **Analytics Platform System for SQL** docs](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [New + Updated (0+1):&nbsp; **Connect to SQL** docs](../connect/new-updated-connect.md)
+- [New + Updated (0+1):&nbsp; **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
+- [New + Updated (12+1): **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
+- [New + Updated (6+2):&nbsp; **Linux for SQL** docs](../linux/new-updated-linux.md)
+- [New + Updated (15+0): **PowerShell for SQL** docs](../powershell/new-updated-powershell.md)
+- [New + Updated (2+9):&nbsp; **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
+- [New + Updated (1+0):&nbsp; **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
+- [New + Updated (1+1):&nbsp; **SQL Operations Studio** docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [New + Updated (1+1):&nbsp; **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
+- [New + Updated (0+1):&nbsp; **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
+- [New + Updated (1+2):&nbsp; **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
+- [New + Updated (0+2):&nbsp; **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
+
+
+
+#### Subject areas that do *not* have any new or recently updated articles
+
+
+- [New + Updated (0+0): **Data Migration Assistant (DMA) for SQL** docs](../dma/new-updated-dma.md)
 - [New + Updated (0+0): **ActiveX Data Objects (ADO) for SQL** docs](../ado/new-updated-ado.md)
+- [New + Updated (0+0): **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
 - [New + Updated (0+0): **Data Quality Services for SQL** docs](../data-quality-services/new-updated-data-quality-services.md)
 - [New + Updated (0+0): **Data Mining Extensions (DMX) for SQL** docs](../dmx/new-updated-dmx.md)
-- [New + Updated (0+0): **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
+- [New + Updated (0+0): **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
 - [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs](../mdx/new-updated-mdx.md)
-- [New + Updated (0+0): **PowerShell for SQL** docs](../powershell/new-updated-powershell.md)
-- [New + Updated (0+0): **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
+- [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
 - [New + Updated (0+0): **Samples for SQL** docs](../sample/new-updated-sample.md)
-- [New + Updated (0+0): **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
 - [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
+- [New + Updated (0+0): **Tools for SQL** docs](../tools/new-updated-tools.md)
 - [New + Updated (0+0): **XQuery for SQL** docs](../xquery/new-updated-xquery.md)
 
-
-&nbsp;
 

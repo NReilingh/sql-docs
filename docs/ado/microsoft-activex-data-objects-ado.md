@@ -3,8 +3,11 @@ title: "Microsoft ActiveX Data Objects (ADO) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/25/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology: "drivers"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -14,7 +17,8 @@ ms.assetid: 2fa6237b-44b8-4b6c-9952-5acd80a54e20
 caps.latest.revision: 20
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Microsoft ActiveX Data Objects (ADO)
 
@@ -23,7 +27,7 @@ ADO is used in C++ programs to connect to SQL Server. Of course, it also works t
 Each section in this article describes a component of ADO.
 
 > [!NOTE]
-> ADO.NET is different than ADO. ADO.NET, and many other SQL connection drivers and their languages, are discussed starting at [SQL Server Drivers](../connect/sql-server-drivers.md).
+> ADO.NET is different than ADO. ADO.NET, and many other SQL connection drivers and their languages, are discussed starting at [SQL Server Drivers](../connect/sql-connection-libraries.md).
 
   
 ## ADO  
